@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pqr" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3f1cb972-808d-4ad5-b034-038a2faf083f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CHACHAGUI-PRUEBA"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="154"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="839"/>
+	<parameter name="id" class="java.lang.Integer"/>
+	<parameter name="ruta" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Pqr
+where id =]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+	</field>
+	<field name="fk_pqr" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="fk_pqr"/>
+	</field>
+	<field name="asunto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="asunto"/>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="descripcion"/>
+	</field>
+	<field name="adjunto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="adjunto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Pqr"/>
+	</field>
+	<field name="estado" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="estado"/>
+	</field>
+	<field name="fecha_creacion" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fecha_creacion"/>
+	</field>
+	<field name="fecha_limite" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fecha_limite"/>
+	</field>
+	<field name="usuario" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="usuario"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="448" splitType="Stretch">
+			<staticText>
+				<reportElement x="120" y="0" width="450" height="80" uuid="38cc2242-1dca-4ae5-a9d2-2a2f177fc26e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REGISTRO DE PQR]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="120" height="80" uuid="a5ab7801-e49d-42ef-93f2-61a9eeef40ec"/>
+				<imageExpression><![CDATA[$P{ruta}+"telefono.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="80" y="150" width="140" height="30" uuid="65f8c272-91c0-4c84-b70f-438fe2aba18c"/>
+				<textFieldExpression><![CDATA[$F{fk_pqr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="80" width="570" height="30" uuid="025d1315-6320-4355-b265-259b206993a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{asunto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="210" width="490" height="170" uuid="7098322e-8e2f-451d-bfcb-659f2bd67c95"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="120" width="140" height="30" uuid="0d9c8e9e-8d9a-4107-ab89-7c867bdeb9ae"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[TIPO DE PQR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="180" width="140" height="30" uuid="8654aaa8-4fa7-42b7-9f38-f09fde207bb3"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[DESCRIPCION:]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

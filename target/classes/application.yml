@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    password: rGSm2UeNJszK8ezt
+    url: jdbc:sqlserver://gts.cwstfwqalveu.us-east-2.rds.amazonaws.com:1433;databaseName=prueba
+
+    username: sa
+    platform: mssql
+  jackson:
+    locale: es_CO
+    time-zone: America/Bogota
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    openInView: false
+    show-sql: true
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+  application:
+    name: Registro_pqr
+  data:
+    jpa:
+      repositories:
+        enabled: true
+server:
+  port: 5000
